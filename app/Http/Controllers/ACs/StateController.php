@@ -46,6 +46,11 @@ class StateController extends Controller
      */
     public function store(Request $request)
     {
+        /*
+        $fileextension = $request->file('image_1')->getClientOriginalExtension();
+			$path = $request->file('image_1')->storeAs('testing', "12333.".$fileextension);
+			print_r($path);
+            */
         /* Validate data before saving. */
 		request()->validate(["state_name" => ["required","max:50"]], StateController::messages());
 		/* Save now. */
